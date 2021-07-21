@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飛ぶぞ</title>
+
+<script>
+    function goQR(){
+        location.href="qr.html";
+    }
+</script>
+</head>
+<body>
+
+    <p>対象患者のバーコードを読み取ってください</p><br>
+    <button type="button" onclick="goQR()">QRを読み取る</button><br>
+
+<form>
+    <p>東洋太郎</p>
+    <label><input type="text" id="kanjaID" placeholder="読み込むボタンを押してください"><button tyepe="button" onclick="harituke()">読み込む</button></label><br>
+    <button type="button" onclick="kakunin()">確認する</button>
+</form>
+
+</body>
+</html>
