@@ -100,12 +100,19 @@ SQR.modal = (() => {
     const modalClose = document.querySelector('#js-modal-close')
 
     /**
+     * 取得した文字列を入れ込んでモーダルを開く
+     */
+    const open = (url) => {
+        result.value = url
+        link.setAttribute('href', url)
+        modal.classList.add('is-show')
+    }
+
+    /**
      * モーダルを閉じてQR読み込みを再開
      */
     const close = () => {
-        modal.classList.remove('is-show')
-        SQR.reader.findQR()
-        location.href="index.html"
+        location.href="index.html";
     }
 
     const copyResultText = () => {
