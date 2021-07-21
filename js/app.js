@@ -114,6 +114,7 @@ SQR.modal = (() => {
     const close = () => {
         modal.classList.remove('is-show')
         SQR.reader.findQR()
+        location.href="index.html";
     }
 
     const copyResultText = () => {
