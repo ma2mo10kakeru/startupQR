@@ -8,6 +8,14 @@
     function goQR(){
         location.href="qr.html";
     }
+
+    function paste() {
+        var pasteText = document.querySelector("#kanjaID");
+        pasteText.focus();
+        document.execCommand("paste");
+        console.log(pasteText.textContent);
+    }
+    document.querySelector("#paste").addEventListener("click", paste);
 </script>
 </head>
 <body>
@@ -17,7 +25,7 @@
 
 <form>
     <p>東洋太郎</p>
-    <label><input type="text" id="kanjaID" placeholder="読み込むボタンを押してください"><button tyepe="button" onclick="harituke()">読み込む</button></label><br>
+    <label><input type="text" id="kanjaID" placeholder="読み込むボタンを押してください"><button tyepe="button" onclick="paste()">読み込む</button></label><br>
     <button type="button" onclick="kakunin()">確認する</button>
 </form>
 
