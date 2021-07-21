@@ -16,6 +16,14 @@
         console.log(pasteText.textContent);
     }
     document.querySelector("#paste").addEventListener("click", paste);
+
+    function kakunin(){
+        if(document.form.kanjaID.value=="S3110"){
+            location.href="match.html";
+        }else{
+            alert("IDが間違っています、再確認してください");
+        }
+    }
 </script>
 </head>
 <body>
@@ -25,8 +33,8 @@
 
 <form>
     <p>東洋太郎</p>
-    <label><input type="text" id="kanjaID" placeholder="読み込むボタンを押してください"><button tyepe="button" onclick="paste()">読み込む</button></label><br>
-    <button type="button" onclick="kakunin()">確認する</button>
+    <label><input type="text" id="kanjaID" placeholder="取得したIDを貼り付けて下さい"><button tyepe="button" onclick="paste()">読み込む</button></label><br>
+    <button type="button" onclick="kakunin()">IDを確認する</button>
 </form>
 
 </body>
