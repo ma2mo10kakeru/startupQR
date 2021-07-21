@@ -112,8 +112,6 @@ SQR.modal = (() => {
      * モーダルを閉じてQR読み込みを再開
      */
     const close = () => {
-        modal.classList.remove('is-show')
-        SQR.reader.findQR()
         location.href="index.html";
     }
 
