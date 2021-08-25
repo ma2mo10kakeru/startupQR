@@ -9,17 +9,8 @@
         location.href="qr.html";
     }
 
-    function paste() {
-        var pasteText = document.querySelector("#kanjaID");
-        pasteText.focus();
-        document.execCommand("paste");
-        console.log(pasteText.textContent);
-    }
-    document.querySelector("#paste").addEventListener("click", paste);
-
     function kakunin(){
-        var kanjaID = "S3110";
-        if(document.form.kanjaID.value==kanjaID){
+        if(document.form.kanjaID.value=="S3110"){
             location.href="match.html";
         }else{
             alert("IDが間違っています、再確認してください");
@@ -32,10 +23,10 @@
     <p>対象患者のバーコードを読み取ってください</p><br>
     <button type="button" onclick="goQR()">QRを読み取る</button><br>
 
-<form>
+<form name="form1">
     <p>東洋太郎</p>
     <label><input type="text" id="kanjaID" placeholder="取得したIDを貼り付けて下さい"><button tyepe="button" onclick="paste()">読み込む</button></label><br>
-    <button type="button" onclick="kakunin()" pattern="\D*">IDを確認する</button>
+    <button type="button" onclick="kakunin()">IDを確認する</button>
 </form>
 
 </body>
